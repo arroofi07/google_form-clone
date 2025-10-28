@@ -1,4 +1,5 @@
 <script lang="ts">
+	import logo from '$lib/assets/logo.png';
 	import * as HoverCard from '$lib/components/ui/hover-card/index.js';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { Eye, Palette, Undo2, Redo2 } from '@lucide/svelte';
@@ -15,8 +16,15 @@
 </script>
 
 <div class="flex h-28 w-full items-start justify-end-safe gap-4 bg-white px-4 pt-5 pr-12 outline-1">
+	<!-- title -->
+    <h1 class="absolute top-6 left-8 gap-3 flex justify-between text-center items-center font-serif text-2xl font-semibold text-gray-700">
+      <img src={logo} class="w-16 h-16" alt="Logo" />
+      Formulir tanpa judul
+		</h1>
+
+	<!-- menu -->
 	{#each itemMenu as item}
-		<HoverCard.Root>
+		<HoverCard.Root openDelay={100} closeDelay={100}>
 			<HoverCard.Trigger class="">
 				<Button
 					variant="outline"
