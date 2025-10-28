@@ -29,7 +29,7 @@
 				<Button
 					variant="outline"
 					class="cursor-pointer {item.label == 'Publikasikan'
-						? 'bg-blue-500 text-white '
+						? 'bg-rose-700 text-white '
 						: ''}   hover:bg-gray-100"
 				>
 					{#if typeof item.label === 'string'}
